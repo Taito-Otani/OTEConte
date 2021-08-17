@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE6E828826C6590000B8CAD4 /* OTEConteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E828726C6590000B8CAD4 /* OTEConteApp.swift */; };
+		FE6E828A26C6590000B8CAD4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E828926C6590000B8CAD4 /* ContentView.swift */; };
+		FE6E828C26C6590100B8CAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6E828B26C6590100B8CAD4 /* Assets.xcassets */; };
+		FE6E828F26C6590100B8CAD4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6E828E26C6590100B8CAD4 /* Preview Assets.xcassets */; };
+		FE6E829A26C6590100B8CAD4 /* OTEConteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E829926C6590100B8CAD4 /* OTEConteTests.swift */; };
+		FE6E82A526C6590100B8CAD4 /* OTEConteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E82A426C6590100B8CAD4 /* OTEConteUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE6E829626C6590100B8CAD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE6E827C26C6590000B8CAD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE6E828326C6590000B8CAD4;
+			remoteInfo = OTEConte;
+		};
+		FE6E82A126C6590100B8CAD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE6E827C26C6590000B8CAD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE6E828326C6590000B8CAD4;
+			remoteInfo = OTEConte;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE6E828426C6590000B8CAD4 /* OTEConte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTEConte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6E828726C6590000B8CAD4 /* OTEConteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTEConteApp.swift; sourceTree = "<group>"; };
+		FE6E828926C6590000B8CAD4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FE6E828B26C6590100B8CAD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE6E828E26C6590100B8CAD4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE6E829026C6590100B8CAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6E829526C6590100B8CAD4 /* OTEConteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTEConteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6E829926C6590100B8CAD4 /* OTEConteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTEConteTests.swift; sourceTree = "<group>"; };
+		FE6E829B26C6590100B8CAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6E82A026C6590100B8CAD4 /* OTEConteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTEConteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6E82A426C6590100B8CAD4 /* OTEConteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTEConteUITests.swift; sourceTree = "<group>"; };
+		FE6E82A626C6590100B8CAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE6E828126C6590000B8CAD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6E829226C6590100B8CAD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6E829D26C6590100B8CAD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE6E827B26C6590000B8CAD4 = {
+			isa = PBXGroup;
+			children = (
+				FE6E828626C6590000B8CAD4 /* OTEConte */,
+				FE6E829826C6590100B8CAD4 /* OTEConteTests */,
+				FE6E82A326C6590100B8CAD4 /* OTEConteUITests */,
+				FE6E828526C6590000B8CAD4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE6E828526C6590000B8CAD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE6E828426C6590000B8CAD4 /* OTEConte.app */,
+				FE6E829526C6590100B8CAD4 /* OTEConteTests.xctest */,
+				FE6E82A026C6590100B8CAD4 /* OTEConteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE6E828626C6590000B8CAD4 /* OTEConte */ = {
+			isa = PBXGroup;
+			children = (
+				FE6E828726C6590000B8CAD4 /* OTEConteApp.swift */,
+				FE6E828926C6590000B8CAD4 /* ContentView.swift */,
+				FE6E828B26C6590100B8CAD4 /* Assets.xcassets */,
+				FE6E829026C6590100B8CAD4 /* Info.plist */,
+				FE6E828D26C6590100B8CAD4 /* Preview Content */,
+			);
+			path = OTEConte;
+			sourceTree = "<group>";
+		};
+		FE6E828D26C6590100B8CAD4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FE6E828E26C6590100B8CAD4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE6E829826C6590100B8CAD4 /* OTEConteTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE6E829926C6590100B8CAD4 /* OTEConteTests.swift */,
+				FE6E829B26C6590100B8CAD4 /* Info.plist */,
+			);
+			path = OTEConteTests;
+			sourceTree = "<group>";
+		};
+		FE6E82A326C6590100B8CAD4 /* OTEConteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FE6E82A426C6590100B8CAD4 /* OTEConteUITests.swift */,
+				FE6E82A626C6590100B8CAD4 /* Info.plist */,
+			);
+			path = OTEConteUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE6E828326C6590000B8CAD4 /* OTEConte */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE6E82A926C6590100B8CAD4 /* Build configuration list for PBXNativeTarget "OTEConte" */;
+			buildPhases = (
+				FE6E828026C6590000B8CAD4 /* Sources */,
+				FE6E828126C6590000B8CAD4 /* Frameworks */,
+				FE6E828226C6590000B8CAD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTEConte;
+			productName = OTEConte;
+			productReference = FE6E828426C6590000B8CAD4 /* OTEConte.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE6E829426C6590100B8CAD4 /* OTEConteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE6E82AC26C6590100B8CAD4 /* Build configuration list for PBXNativeTarget "OTEConteTests" */;
+			buildPhases = (
+				FE6E829126C6590100B8CAD4 /* Sources */,
+				FE6E829226C6590100B8CAD4 /* Frameworks */,
+				FE6E829326C6590100B8CAD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE6E829726C6590100B8CAD4 /* PBXTargetDependency */,
+			);
+			name = OTEConteTests;
+			productName = OTEConteTests;
+			productReference = FE6E829526C6590100B8CAD4 /* OTEConteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FE6E829F26C6590100B8CAD4 /* OTEConteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE6E82AF26C6590100B8CAD4 /* Build configuration list for PBXNativeTarget "OTEConteUITests" */;
+			buildPhases = (
+				FE6E829C26C6590100B8CAD4 /* Sources */,
+				FE6E829D26C6590100B8CAD4 /* Frameworks */,
+				FE6E829E26C6590100B8CAD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE6E82A226C6590100B8CAD4 /* PBXTargetDependency */,
+			);
+			name = OTEConteUITests;
+			productName = OTEConteUITests;
+			productReference = FE6E82A026C6590100B8CAD4 /* OTEConteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE6E827C26C6590000B8CAD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					FE6E828326C6590000B8CAD4 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					FE6E829426C6590100B8CAD4 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = FE6E828326C6590000B8CAD4;
+					};
+					FE6E829F26C6590100B8CAD4 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = FE6E828326C6590000B8CAD4;
+					};
+				};
+			};
+			buildConfigurationList = FE6E827F26C6590000B8CAD4 /* Build configuration list for PBXProject "OTEConte" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE6E827B26C6590000B8CAD4;
+			productRefGroup = FE6E828526C6590000B8CAD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE6E828326C6590000B8CAD4 /* OTEConte */,
+				FE6E829426C6590100B8CAD4 /* OTEConteTests */,
+				FE6E829F26C6590100B8CAD4 /* OTEConteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE6E828226C6590000B8CAD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6E828F26C6590100B8CAD4 /* Preview Assets.xcassets in Resources */,
+				FE6E828C26C6590100B8CAD4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6E829326C6590100B8CAD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6E829E26C6590100B8CAD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE6E828026C6590000B8CAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6E828A26C6590000B8CAD4 /* ContentView.swift in Sources */,
+				FE6E828826C6590000B8CAD4 /* OTEConteApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6E829126C6590100B8CAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6E829A26C6590100B8CAD4 /* OTEConteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6E829C26C6590100B8CAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6E82A526C6590100B8CAD4 /* OTEConteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE6E829726C6590100B8CAD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE6E828326C6590000B8CAD4 /* OTEConte */;
+			targetProxy = FE6E829626C6590100B8CAD4 /* PBXContainerItemProxy */;
+		};
+		FE6E82A226C6590100B8CAD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE6E828326C6590000B8CAD4 /* OTEConte */;
+			targetProxy = FE6E82A126C6590100B8CAD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FE6E82A726C6590100B8CAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE6E82A826C6590100B8CAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE6E82AA26C6590100B8CAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"OTEConte/Preview Content\"";
+				DEVELOPMENT_TEAM = BUWC47QEKA;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = OTEConte/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.nineteen95Studio.OTEConte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FE6E82AB26C6590100B8CAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"OTEConte/Preview Content\"";
+				DEVELOPMENT_TEAM = BUWC47QEKA;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = OTEConte/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.nineteen95Studio.OTEConte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		FE6E82AD26C6590100B8CAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BUWC47QEKA;
+				INFOPLIST_FILE = OTEConteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.nineteen95Studio.OTEConteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTEConte.app/OTEConte";
+			};
+			name = Debug;
+		};
+		FE6E82AE26C6590100B8CAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BUWC47QEKA;
+				INFOPLIST_FILE = OTEConteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.nineteen95Studio.OTEConteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTEConte.app/OTEConte";
+			};
+			name = Release;
+		};
+		FE6E82B026C6590100B8CAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BUWC47QEKA;
+				INFOPLIST_FILE = OTEConteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.nineteen95Studio.OTEConteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OTEConte;
+			};
+			name = Debug;
+		};
+		FE6E82B126C6590100B8CAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BUWC47QEKA;
+				INFOPLIST_FILE = OTEConteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.nineteen95Studio.OTEConteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OTEConte;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE6E827F26C6590000B8CAD4 /* Build configuration list for PBXProject "OTEConte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6E82A726C6590100B8CAD4 /* Debug */,
+				FE6E82A826C6590100B8CAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE6E82A926C6590100B8CAD4 /* Build configuration list for PBXNativeTarget "OTEConte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6E82AA26C6590100B8CAD4 /* Debug */,
+				FE6E82AB26C6590100B8CAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE6E82AC26C6590100B8CAD4 /* Build configuration list for PBXNativeTarget "OTEConteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6E82AD26C6590100B8CAD4 /* Debug */,
+				FE6E82AE26C6590100B8CAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE6E82AF26C6590100B8CAD4 /* Build configuration list for PBXNativeTarget "OTEConteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6E82B026C6590100B8CAD4 /* Debug */,
+				FE6E82B126C6590100B8CAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE6E827C26C6590000B8CAD4 /* Project object */;
+}
