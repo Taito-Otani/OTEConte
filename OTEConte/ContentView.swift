@@ -16,39 +16,172 @@ import SwiftUI
 import PencilKit
 import PDFKit
 
+class SaveData: ObservableObject{
+    @Published var prjNums:Int{
+        didSet{
+            UserDefaults.standard.set(prjNums, forKey: "prjNums")
+        }
+    }
+    
+    @Published var prjName:String {
+        didSet {
+            UserDefaults.standard.set(prjName, forKey: "prjName")
+        }
+    }
+    
+    @Published var pageNums:Int {
+        didSet {
+            UserDefaults.standard.set(pageNums, forKey: "pageNums")
+        }
+    }
+    
+    @Published var cnvData:[PKCanvasView]{
+        didSet {
+            UserDefaults.standard.set(cnvData, forKey: "cnvData")
+        }
+    }
+    
+    @Published var memoData:[PKCanvasView]{
+        didSet {
+            UserDefaults.standard.set(memoData, forKey: "memoData")
+        }
+    }
+    /// 初期化処理
+    init() {
+        prjNums = UserDefaults.standard.object(forKey: "prjNums") as? Int ?? 1
+        prjName = UserDefaults.standard.string(forKey: "prjName") ?? "project"
+        pageNums = UserDefaults.standard.object(forKey: "pageNums") as? Int ?? 1
+        cnvData = UserDefaults.standard.object(forKey: "cvnData") as? [PKCanvasView] ?? [PKCanvasView()]
+        memoData = UserDefaults.standard.object(forKey: "memoData") as? [PKCanvasView] ?? [PKCanvasView()]
+    }
+}
+
+class MyData: ObservableObject{
+
+}
+
+struct Project: Hashable  {
+//    var id = UUID()
+    var prjName:String
+    var pageNums:Int
+    var cnvData:[PKCanvasView]
+    var memoData:[PKCanvasView]
+}
+
 struct ContentView: View {
+    @ObservedObject var saveData = SaveData()
+    @State private var projects = [Project(prjName: "aaa", pageNums: 1, cnvData: [PKCanvasView()], memoData: [PKCanvasView()])]
+//    @State private var projects = []
     @State private var showActivityView: Bool = false
     @State private var pageNums = 2
+    @State private var projectNums = 2
     @State private var sherePDF = URL(fileURLWithPath: "")
+    @State private var nowView = 0;
+    @State private var canvas:[PKCanvasView] = [PKCanvasView()]
+    @State private var memoCanvas:[PKCanvasView] = [PKCanvasView()]
+    
+    @Environment(\.editMode) var editmode
+    
+    func rowRemove(offsets: IndexSet) {
+        projects.remove(atOffsets: offsets)
+        saveData.prjNums = projects.count
+    }
+
     var body: some View {
-        List{
-            ForEach(1..<pageNums, id: \.self){ _nums  in
-                VStack(){
-                    ConteView(nums: _nums)
-                    HStack{
-                        Spacer()
-                        Text(" ＋ ").onTapGesture {
-                            if(_nums == pageNums-1){
-                                pageNums = pageNums + 1
+        if(nowView == 0){
+            VStack{
+                Text("OT.E-Conte")
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                Spacer()
+                Image("imgs")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                Spacer()
+                HStack{
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Text("BY NINETEEN95 STUDIO")
+                    Spacer()
+                }
+                List{
+                    ForEach(projects, id: \.self) { prj in
+                        HStack{
+                            Text(prj.prjName).onTapGesture {
+                                nowView = 1
                             }
+                            Spacer()
                         }
-                        Spacer()
-                        Spacer()
-                        Text("OT.E-Conte - NINETEEN95 STUDIO")
-                        //TODO add Export PDF feature
-                        Button(action: {
-                            exportToPDF()
-                        }) {
-                            Image(systemName:"square.and.arrow.up")
-                        }
-                        .sheet(isPresented: self.$showActivityView) {
-                            ActivityView(
-                                activityItems:[sherePDF],
-                                applicationActivities: nil
-                            )
+                    }.onDelete(perform: rowRemove)
+                }
+                VStack{
+                    Spacer()
+                    Text("New Project +").onTapGesture {
+                        projects.append(Project(prjName: "aaa", pageNums: 1, cnvData: [PKCanvasView()], memoData: [PKCanvasView()]))
+                        saveData.prjNums = projects.count
+                    }
+                    Spacer()
+                }
+            }.onAppear(){
+                projects = []
+                for i in 0..<saveData.prjNums {
+                    projects.append(Project(prjName: saveData.prjName, pageNums: saveData.pageNums, cnvData: saveData.cnvData, memoData: saveData.memoData))
+                    }
+            }
+            
+        }else if(nowView==1){
+            VStack{
+                HStack{
+                    Spacer()
+                    Text("<").onTapGesture {
+                        nowView = 0
+                    }
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                }
+                List{
+                    ForEach(1..<pageNums, id: \.self){ _nums  in
+                        
+                        VStack(){
+                            ConteView(canvas: $canvas[_nums-1], memoCanvas: $memoCanvas[_nums-1], nums: _nums)
+                            HStack{
+                                Spacer()
+                                Text(" ＋ ").onTapGesture {
+                                    if(_nums == pageNums-1){
+                                        canvas.append(PKCanvasView())
+                                        memoCanvas.append(PKCanvasView())
+                                        pageNums = pageNums + 1
+                                    }
+                                }
+                                Spacer()
+                                Spacer()
+                                Text("OT.E-Conte - NINETEEN95 STUDIO")
+                                //TODO add Export PDF feature
+                                //                        Button(action: {
+                                //                            exportToPDF()
+                                //                        }) {
+                                //                            Image(systemName:"square.and.arrow.up")
+                                //                        }
+                                //                        .sheet(isPresented: self.$showActivityView) {
+                                //                            ActivityView(
+                                //                                activityItems:[sherePDF],
+                                //                                applicationActivities: nil
+                                //                            )
+                                //                        }
+                            }
                         }
                     }
                 }
+            }.onAppear(){
+                
             }
         }
     }
@@ -80,8 +213,8 @@ struct ContentView: View {
 
 struct ConteView: View {
     @State private var isShowing = false
-    @State private var canvas = PKCanvasView()
-    @State private var memoCanvas = PKCanvasView()
+    @Binding var canvas:PKCanvasView
+    @Binding var memoCanvas:PKCanvasView
     var nums: Int
     var body: some View {
         VStack {
@@ -142,7 +275,7 @@ struct PenKitView:UIViewRepresentable {
     typealias UIViewType = PKCanvasView
     let toolPicker = PKToolPicker()
     func makeUIView(context: Context) -> PKCanvasView {
-//        let pkcView = PKCanvasView()
+        //        let pkcView = PKCanvasView()
         pkcView.drawingPolicy = PKCanvasViewDrawingPolicy.anyInput
         toolPicker.addObserver(pkcView)
         toolPicker.setVisible(true, forFirstResponder: pkcView)
@@ -151,7 +284,7 @@ struct PenKitView:UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: PKCanvasView, context: Context){
-//        var img = uiView.drawing.image(from: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), scale: 1)
+        //        var img = uiView.drawing.image(from: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), scale: 1)
         print("drawing")
     }
 }
